@@ -25,12 +25,12 @@ class Doctor extends React.Component {
                     {row.map(p => (
                         <div className='col-20' key={p.doctor_id}>
                             <div className='doctor-container'>
-                                <p className='text-block'>{p.name}</p>
-                                <p className='text-block'>{p.hospital}</p>
-                                <p className='text-block'>{p.specialization}</p>
-                                <p className='text-block'>{p.price}</p>
-                                <p className='text-block'>{p.about}</p>
-                                <p className='text-block'>{p.overview}</p>
+                                <p className='text-block'>
+                                    Nama: {p.name}
+                                    Harga: {p.price.formatted}
+                                    specialisasi: {p.specialization.name}
+                                </p>
+                                <img src={p.photo.formats.thumbnail} alt="doctor.png" className='left'></img>
                             </div>
                         </div>
                     ))}

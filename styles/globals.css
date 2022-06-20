@@ -27,16 +27,25 @@ a {
 .doctor-container {
   width: 100%;
   height: 100%;
+  float: left;
 }
 
 .text-block {
-  top: -26%;
+  border: 15px solid grey;
+  top: 200%;
   height: 10%;
-  width: 60%;
-  position: relative;
+  width: 50%;
+  position:relative;
   background-color: rgba(red, green, blue, alpha);
   color: rgba(red, green, blue, alpha);
-  padding: 12px;
+  padding: 20px;
+}
+
+.left {
+  position: relative;
+  top: 8px;
+  left: 16px;
+  font-size: 18px;
 }
 
 .row {
