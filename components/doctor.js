@@ -26,10 +26,12 @@ class Doctor extends React.Component {
                         <div className='col-20' key={p.doctor_id}>
                             <div className='doctor-container'>
                                 <p className='text-block'>
-                                    Nama: {p.name}
-                                    Harga: {p.price.formatted}
-                                    specialisasi: {p.specialization.name}
+                                <div className='leftdetail'>
+                                <div>Nama: {p.name}</div>
+                                <div>Hospital: {p.hospital.name} - Specialisasi: {p.specialization.name}</div>
+                                </div>
                                 </p>
+                                <div className='bottomright'>Price: {p.price.formatted}</div>
                                 <img src={p.photo.formats.thumbnail} alt="doctor.png" className='left'></img>
                             </div>
                         </div>

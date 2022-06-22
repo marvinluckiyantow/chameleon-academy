@@ -6,11 +6,6 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
 * {
   box-sizing: border-box;
 }
@@ -25,27 +20,44 @@ a {
 }
 
 .doctor-container {
-  width: 100%;
-  height: 100%;
-  float: left;
+  width: 95%;
+  height: 145%;
 }
 
 .text-block {
-  border: 15px solid grey;
-  top: 200%;
-  height: 10%;
-  width: 50%;
+  border: 1px solid black;
+  top: 100%;
+  height: 100%;
+  width: 100%;
   position:relative;
   background-color: rgba(red, green, blue, alpha);
   color: rgba(red, green, blue, alpha);
-  padding: 20px;
+  padding: 10px;
+  font-size: 18px;
+  display:inline-block;
 }
 
 .left {
   position: relative;
   top: 8px;
-  left: 16px;
+  left: -120px;
   font-size: 18px;
+}
+
+.leftdetail {
+  position: relative;
+  top: 20px;
+  left: 5cm;
+  font-size: 18px;
+  display: inline-block;
+}
+
+.bottomright {
+  position: relative;
+  top: 60px;
+  left:12cm;
+  font-size: 18px;
+  display: inline-block;
 }
 
 .row {
@@ -55,4 +67,8 @@ a {
 
 .search-box {
   width: 30;
+}
+
+.col-20 {
+  width:100%;
 }
