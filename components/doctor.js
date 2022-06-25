@@ -19,16 +19,17 @@ class Doctor extends React.Component {
             const listDoctor = data.data;
             const rows = [...Array(Math.ceil(listDoctor.length / 2))];
             const doctorRows = rows.map((row, index) => listDoctor.slice(index * 2, index * 2 + 2));
-            console.log(response);
+            //console.log(response);
             const doctors = doctorRows.map((row, index) => (
-                <div className='row' key={index}>
+                <div className='row-15' key={index}>
                     {row.map(p => (
                         <div className='col-20' key={p.doctor_id}>
                             <div className='doctor-container'>
                                 <p className='text-block'>
                                 <div className='leftdetail'>
                                 <div>Nama: {p.name}</div>
-                                <div>Hospital: {p.hospital.name} - Specialisasi: {p.specialization.name}</div>
+                                <div>Hospital: {p.hospital.name}  Specialisasi: {p.specialization.name}</div>
+                                <div>About: {p.about}</div>
                                 </div>
                                 </p>
                                 <div className='bottomright'>Price: {p.price.formatted}</div>
