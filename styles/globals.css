@@ -1,33 +1,29 @@
 html,
 body {
-  padding: 0;
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
-.p {
-  width: auto;
-  height: auto;
-  text-align: center;
-}
-
 .container {
-  width: 100vw;
+  width: 98vw;
   height: 220vh;
   background-color: rgba(red, green, blue, alpha);
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 15px;
 }
 
 .doctor-container {
   width: 95%;
   height: 60%;
-  margin-bottom: auto;
+  margin-left: 20px;
+}
+
+.finder-container {
+  border: 1px solid black;
+  display: flex;
+  width: 95%;
 }
 
 .text-block {
