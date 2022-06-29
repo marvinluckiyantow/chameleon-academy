@@ -1,16 +1,10 @@
-import Image from 'next/image'
 import React from 'react'
 import axios from 'axios'
-import parse from 'html-react-parser';
+import parse from 'html-react-parser'
 
 class Doctor extends React.Component {
     state = {
         doctors: [],
-    }
-
-    selectDoctor = (event, p) => {
-        event.preventDefault();
-        this.props.selectDoctor(p);
     }
 
     componentDidMount() {
@@ -46,6 +40,12 @@ class Doctor extends React.Component {
             console.log(error);
         })
     }
+
+    selectDoctor = (event, p) => {
+        event.preventDefault();
+        this.props.selectDoctor(p);
+    }
+
     render() {
         return (
             <div>
