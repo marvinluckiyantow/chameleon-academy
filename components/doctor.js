@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import axios from 'axios'
+import parse from 'html-react-parser';
 
 class Doctor extends React.Component {
     state = {
@@ -28,8 +29,8 @@ class Doctor extends React.Component {
                                 <p className='text-block'>
                                 <div className='leftdetail'>
                                 <div>Nama: {p.name}</div>
-                                <div>Hospital: {p.hospital.name}  Specialisasi: {p.specialization.name}</div>
-                                <div>About: {p.about}</div>
+                                <div>Hospital: {p.hospital[0].name} - Specialisasi: {p.specialization.name}</div>
+                                <div className='leftabout'>About:{parse(p.about)}</div>
                                 </div>
                                 </p>
                                 <div className='bottomright'>Price: {p.price.formatted}</div>
@@ -39,7 +40,6 @@ class Doctor extends React.Component {
                     ))}
                 </div>
             ));
-
             this.setState({ doctors })
         })
         .catch(error => {
