@@ -32,10 +32,10 @@ jobs:
     - name: List output files
       run: find build/ -print
 
-      - name: 📂 Sync files
-      uses: SamKirkland/FTP-Deploy-Action@4.2.0
-      with:
-        server: chameleon-academy-marvin@digitalnative.id
-        username: ${{ secrets.FTP_USERNAME }}
-        password: ${{ secrets.FTP_PASSWORD }}
-        server-dir:
+    - name: 📂 Sync files
+    uses: SamKirkland/FTP-Deploy-Action@4.2.0
+    with:
+      server: chameleon-academy-marvin@digitalnative.id
+      username: ${{ secrets.FTP_USERNAME }}
+      password: ${{ secrets.FTP_PASSWORD }}
+      server-dir: /development/
