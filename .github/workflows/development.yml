@@ -24,8 +24,6 @@ jobs:
       run: |
         npm install
         npm run build
-      env:
-        CI: false
 
     - name: List output files
       run: find build/ -print
@@ -36,4 +34,4 @@ jobs:
         server: chameleon-academy-marvin@digitalnative.id
         username: ${{ secrets.FTP_USERNAME }}
         password: ${{ secrets.FTP_PASSWORD }}
-        server-dir: /staging-admin.artcara.id/  #direktori server
+        server-dir:
